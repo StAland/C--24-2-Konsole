@@ -18,40 +18,16 @@ namespace C__24_2_Konsole
         }
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Hello World!");
 
-            var wochentag = Wochentage.Freitag;
-            
-            switch (wochentag)
-            {
-                case Wochentage.Montag:
-                    Console.WriteLine("Montag");
-                    break;
-                case Wochentage.Dienstag:
-                    Console.WriteLine("Dienstag");
-                    break;
-                case Wochentage.Mittwoch:
-                case Wochentage.Donnerstag:
-                    Console.WriteLine("Woche");
-                    break;
-            }
+            var password = "password";
+            Console.WriteLine("Bitte Passwort eingeben: ");
+            var eingabe = Console.ReadLine();
+            string ausgabe = eingabe == password 
+                ? "Zugriff erlaubt" 
+                : "Zugriff verweigert";
+            Console.WriteLine(ausgabe);
         }
 
-        static bool IsWerktag(Wochentage wochentag)
-        {
-            switch (wochentag)
-            {
-                case Wochentage.Montag:
-                case Wochentage.Dienstag:
-                case Wochentage.Mittwoch:
-                case Wochentage.Donnerstag:
-                case Wochentage.Freitag:
-                    return true;
-                default:
-                    return false;
-            }
-        }
     }
 }
 
