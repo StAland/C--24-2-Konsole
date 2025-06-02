@@ -6,26 +6,22 @@ namespace C__24_2_Konsole
 
     internal class Program
     {
-        enum Wochentage
-        {
-            Montag = 1,
-            Dienstag = 2,
-            Mittwoch = 3,
-            Donnerstag,
-            Freitag,
-            Samstag,
-            Sonntag
-        }
+
         static void Main(string[] args)
         {
+            var zaehler = 0;
+            while (zaehler < 0)
+            {
+                Console.WriteLine("Kopf: " + zaehler);
+                zaehler++;
+            }
 
-            var password = "password";
-            Console.WriteLine("Bitte Passwort eingeben: ");
-            var eingabe = Console.ReadLine();
-            string ausgabe = eingabe == password 
-                ? "Zugriff erlaubt" 
-                : "Zugriff verweigert";
-            Console.WriteLine(ausgabe);
+            zaehler = 0;
+            do
+            {
+                Console.WriteLine("Fuss: " + zaehler);
+                zaehler++;
+            }while (zaehler < 0);
         }
 
     }
