@@ -9,19 +9,31 @@ namespace C__24_2_Konsole
 
         static void Main(string[] args)
         {
-            var zaehler = 0;
-            while (zaehler < 0)
+            //var zaehler = 0;
+            //while (zaehler < 0)
+            //{
+            //    Console.WriteLine("Kopf: " + zaehler);
+            //    zaehler++;
+            //}
+
+            //zaehler = 0;
+            //do
+            //{
+            //    Console.WriteLine("Fuss: " + zaehler);
+            //    zaehler++;
+            //} while (zaehler < 0);
+
+            for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine("Kopf: " + zaehler);
-                zaehler++;
+                Console.WriteLine(i);
             }
 
-            zaehler = 0;
-            do
+            for (int i = 0;i < args.Length; i++)
             {
-                Console.WriteLine("Fuss: " + zaehler);
-                zaehler++;
-            }while (zaehler < 0);
+                Console.WriteLine(args[i]);
+            }
+            Console.ReadLine();
+
         }
 
     }
