@@ -34,6 +34,17 @@ namespace C__24_2_Konsole
             }
             Console.ReadLine();
 
+            var liste = new List<string>();
+            liste.Add("Hallo");
+            liste.Add("Steffen");
+
+
+            foreach (string s in liste)
+            {
+                Console.WriteLine(s);
+            }
+
+            liste.ForEach(x => Console.WriteLine(x));
         }
 
     }
