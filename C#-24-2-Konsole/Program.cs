@@ -9,15 +9,18 @@ namespace C__24_2_Konsole
 
         static void Main(string[] args)
         {
-            var haus = new Haus("gruen", 4);
-            haus.Konselenausgabe();
-            haus.Farbe = "Hallo";
-            haus.Konselenausgabe();
-            var haus2 = new Haus("gelb", 3);
-            haus.Konselenausgabe();
-            haus2.Konselenausgabe();
-            Console.WriteLine(Haus.Anzahl());
-        }       
+            var bruch1 = new Bruch(3, 2);
+            var bruch2 = new Bruch(7, 3);
+            var ergebnis = bruch1.Multiplizieren(bruch2);
+            Console.WriteLine(ergebnis.Zaehler + " / " + ergebnis.Nenner);
+            ergebnis = Bruch.MultiplizierenStatic(bruch1, bruch2);
+            Console.WriteLine(ergebnis.Zaehler + " / " + ergebnis.Nenner);
+            ergebnis = bruch1 * bruch2;
+            Console.WriteLine(ergebnis.Zaehler + " / " + ergebnis.Nenner);
+            ergebnis = bruch1 / bruch2;
+            Console.WriteLine(ergebnis.Zaehler + " / " + ergebnis.Nenner);
+
+        }
 
     }
 }
