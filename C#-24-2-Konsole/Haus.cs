@@ -12,8 +12,21 @@ namespace C__24_2_Konsole
         private bool _locked = false;
 
         public int AnzahlZimmer { get; set; }
+        public Tuer Haustuer { get; set; }
 
-        
+        public class Tuer
+        {
+            public void Aufschliessen()
+            {
+
+            }
+        }
+
+        private static int _anzahl = 0;
+        public static int Anzahl()
+        {
+            return _anzahl;
+        }
 
         public string Farbe 
         {
@@ -39,6 +52,7 @@ namespace C__24_2_Konsole
                 _farbe = "gelb";
             }
             AnzahlZimmer = anzahlZimmer;
+            _anzahl += 1;
         }
 
         internal void Aufschliessen()
