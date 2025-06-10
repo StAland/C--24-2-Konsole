@@ -11,6 +11,8 @@ namespace C__24_2_Konsole
         {
             var haus = new Haus("weiß", 4);
             haus.Konselenausgabe();
+            haus.Farbe = "Hallo";
+            haus.Konselenausgabe();
         }       
 
     }

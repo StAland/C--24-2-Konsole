@@ -9,31 +9,36 @@ namespace C__24_2_Konsole
     internal class Haus
     {
         private string _farbe;
-        private int _anzahlZimmer;
+
+        public int AnzahlZimmer {  get; set; }
+
+        public string Farbe 
+        {
+            set
+            {
+                string[] erlaubteFarben = ["gelb", "gruen", "blau"];
+                if (erlaubteFarben.Contains(value))
+                {
+                    _farbe = value;
+                }
+            }
+            get 
+            { 
+                return _farbe;
+            } 
+        }
 
         internal Haus(string farbe, int anzahlZimmer)
         {
-            _farbe = farbe;
-            _anzahlZimmer = anzahlZimmer;
+            Farbe = farbe;       
+            AnzahlZimmer = anzahlZimmer;
         }
 
-        public string getFarbe()
-        {
-            return _farbe;
-        }
 
-        public void setFarbe(string farbe)
-        {
-            string[] erlaubteFarben = ["gruen", "gelb", "blau"];
-            if (erlaubteFarben.Contains(farbe))
-            {
-                _farbe = farbe;
-            }
-        }
 
         internal void Konselenausgabe()
         {
-            Console.WriteLine($"Das Haus hat {_anzahlZimmer} Zimmer und ist {_farbe}");
+            Console.WriteLine($"Das Haus hat {AnzahlZimmer} Zimmer und ist {_farbe}");
         }
     }
 }
