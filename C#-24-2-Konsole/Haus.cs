@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace C__24_2_Konsole
 {
-    internal class Haus
+    internal class Haus 
     {
         private string _farbe;
+        private bool _locked = false;
 
-        public int AnzahlZimmer {  get; set; }
+        public int AnzahlZimmer { get; set; }
+
+        
 
         public string Farbe 
         {
@@ -30,11 +33,39 @@ namespace C__24_2_Konsole
 
         internal Haus(string farbe, int anzahlZimmer)
         {
-            Farbe = farbe;       
+            Farbe = farbe;
+            if (string.IsNullOrEmpty(_farbe))
+            {
+                _farbe = "gelb";
+            }
             AnzahlZimmer = anzahlZimmer;
         }
 
+        internal void Aufschliessen()
+        {
+            if (_locked)
+            {
+                _locked = false;
+                Console.WriteLine("Das Haus ist jetzt aufgeschlossen.");
+            }
+            else
+            {
+                Console.WriteLine("Das Haus ist bereits aufgeschlossen");
+            }
+        }
 
+        internal void Zuschliessen()
+        {
+            if (_locked)
+            {
+                _locked = true;
+                Console.WriteLine("Das Haus ist jetzt zugeschlossen.");
+            }
+            else
+            {
+                Console.WriteLine("Das Haus ist bereits zugeschlossen");
+            }
+        }
 
         internal void Konselenausgabe()
         {
