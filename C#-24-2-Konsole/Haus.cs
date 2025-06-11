@@ -6,21 +6,14 @@ using System.Threading.Tasks;
 
 namespace C__24_2_Konsole
 {
-    internal class Haus 
+    internal class Haus : Gebaeude
     {
         private string _farbe;
         private bool _locked = false;
 
         public int AnzahlZimmer { get; set; }
-        public Tuer Haustuer { get; set; }
 
-        public class Tuer
-        {
-            public void Aufschliessen()
-            {
-
-            }
-        }
+        public int Stockwerke { get; set; }
 
         private static int _anzahl = 0;
         public static int Anzahl()
@@ -44,7 +37,7 @@ namespace C__24_2_Konsole
             } 
         }
 
-        internal Haus(string farbe, int anzahlZimmer)
+        internal Haus(int groesse, string farbe, int anzahlZimmer, int stockwerke) : base(groesse)
         {
             Farbe = farbe;
             if (string.IsNullOrEmpty(_farbe))
@@ -52,6 +45,7 @@ namespace C__24_2_Konsole
                 _farbe = "gelb";
             }
             AnzahlZimmer = anzahlZimmer;
+            Stockwerke = stockwerke;
             _anzahl += 1;
         }
 
