@@ -9,11 +9,16 @@ namespace C__24_2_Konsole
 
         static void Main(string[] args)
         {
-            var meinHaus = new Einfamilienhaus(100, "gelb", 4);
-            Gebaeude meinGebaeude = meinHaus;
-            //meinGebaeude = new Gebaeude(100);           
-            Einfamilienhaus immerNochMeinHaus = (Einfamilienhaus)meinGebaeude;
-            Console.WriteLine(immerNochMeinHaus.Farbe);
+            var meineHaustiere = new List<Tier>();
+            meineHaustiere.Add(new Hund("Carlos"));
+            meineHaustiere.Add(new Katze("Lucy"));
+            meineHaustiere.Add(new Hund("Chani"));
+
+            foreach (var tier in meineHaustiere)
+            {
+                tier.Begruessen();
+                tier.Schlafen();
+            }
         }
 
     }
