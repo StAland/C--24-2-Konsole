@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C__24_2_Konsole
 {
-    internal class Haus : Gebaeude
+    public class Haus : Gebaeude
     {
         private string _farbe;
         private bool _locked = false;
@@ -37,7 +37,7 @@ namespace C__24_2_Konsole
             } 
         }
 
-        internal Haus(int groesse, string farbe, int anzahlZimmer, int stockwerke) : base(groesse)
+        public Haus(int groesse, string farbe, int anzahlZimmer, int stockwerke) : base(groesse)
         {
             Farbe = farbe;
             if (string.IsNullOrEmpty(_farbe))

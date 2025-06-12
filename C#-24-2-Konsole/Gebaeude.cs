@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C__24_2_Konsole
 {
-    internal class Gebaeude
+    public class Gebaeude
     {
         public int Groesse { get; set; }
 
